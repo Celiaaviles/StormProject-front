@@ -1,0 +1,28 @@
+.error {
+  background-image: url(../../../error.webp);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 655px;
+  flex-shrink: 0;
+  .text {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0.5rem;
+  }
+
+  .aHome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem;
+    color: #fff;
+  }
+}

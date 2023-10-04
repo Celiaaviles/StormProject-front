@@ -1,0 +1,58 @@
+.footer {
+  background-color: #3b3b3b;
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  margin-top: 3rem;
+  bottom: 0;
+
+  .logofooter {
+    background-color: #3b3b3b;
+    width: 83.518px;
+    height: 22px;
+    align-items: baseline;
+  }
+  .spanfooter {
+    background-color: #3b3b3b;
+    color: #ccc;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .spanfootermarca {
+    background-color: #3b3b3b;
+    color: #ccc;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .address {
+    padding: 1.5rem;
+    background-color: #3b3b3b;
+    display: flex;
+    justify-content: baseline;
+    flex-direction: column;
+    gap: 20px;
+
+    hr {
+      border: 0.5px solid #ccc;
+      width: 100%;
+    }
+  }
+  .socialIcons {
+    background-color: #3b3b3b;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    align-self: stretch;
+
+    .a {
+      background-color: #3b3b3b;
+      .img {
+        background-color: #3b3b3b;
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}

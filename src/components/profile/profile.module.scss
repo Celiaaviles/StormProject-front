@@ -1,0 +1,34 @@
+.profileStorms {
+  min-height: 50vh;
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    color: #fff;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .subtitle {
+    color: #fff;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+  }
+  .storms {
+    display: flex;
+    margin: 1rem 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 80%;
+    height: auto;
+  }
+}

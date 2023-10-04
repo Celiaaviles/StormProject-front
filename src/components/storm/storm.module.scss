@@ -1,0 +1,111 @@
+.stormlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1rem;
+  width: 80vw;
+  background-color: #3b3b3b;
+  border-radius: 20px;
+
+  a {
+    height: auto;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: white;
+  }
+
+  .stormimage {
+    border-radius: 20px 20px 0 0;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .stormInfo {
+    padding: 2rem;
+    height: fit-content;
+    .stormtitle {
+      display: block;
+      color: #fff;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 600;
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+    }
+    .stormdescription {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow-y: hidden;
+      color: #fff;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.9rem;
+      margin-bottom: 3rem;
+    }
+    .ubication {
+      color: #c57642;
+      font-family: Space Mono;
+      font-size: 0.8rem;
+      line-height: 140%;
+    }
+
+    .modifiers {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 2rem 0;
+
+      .link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #c57642;
+        font-size: 1rem;
+        border: 2px solid #c57642;
+        border-radius: 25px;
+        padding: 1rem;
+        margin-right: 1rem;
+        width: 7rem;
+        text-align: center;
+        cursor: pointer;
+
+        svg {
+          color: #c57642;
+          margin-right: 0.5rem;
+        }
+        span {
+          color: white;
+        }
+      }
+
+      .delete {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1rem;
+        border: 2px solid #c57642;
+        border-radius: 25px;
+        padding: 1rem;
+        width: 7rem;
+        text-align: center;
+        cursor: pointer;
+
+        svg {
+          color: #c57642;
+          margin-right: 0.5rem;
+        }
+        span {
+          color: white;
+        }
+      }
+    }
+  }
+}

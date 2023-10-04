@@ -1,0 +1,34 @@
+.detailsdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .infodiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p {
+      color: #fff;
+      margin: 2rem 1rem 0 1rem;
+      padding: 0.5rem;
+    }
+  }
+
+  img {
+    width: 100vh;
+    margin: 1rem;
+  }
+
+  .titledetail {
+    color: #fff;
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .detailsLink {
+    color: #c57642;
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+}

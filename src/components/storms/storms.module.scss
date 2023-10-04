@@ -1,0 +1,51 @@
+.stormsMainList {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .storms {
+    display: flex;
+    margin: 1rem 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    height: auto;
+  }
+
+  h2 {
+    color: #fff;
+    font-size: 2rem;
+    font-style: normal;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .subtitle {
+    display: flex;
+    color: #fff;
+    font-size: 1rem;
+    font-style: normal;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .selectregion {
+    all: unset;
+    margin: 2rem 0 0 0;
+    padding: 0.4rem 6rem;
+    text-align: center;
+    border: 1px solid;
+    background-color: white;
+    border-radius: 25px;
+  }
+  .selectcontinent {
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem;
+    text-align: center;
+  }
+}

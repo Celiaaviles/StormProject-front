@@ -1,0 +1,53 @@
+.userForm {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 3rem;
+
+  input {
+    width: 15rem;
+    display: flex;
+    height: 46px;
+    padding: 0px 20px;
+    margin: 0.5rem;
+    border-radius: 20px;
+    border: 1px solid #858584;
+    background-color: #fff;
+  }
+
+  button {
+    border: 1px solid #858584;
+    height: 46px;
+    width: 17.8rem;
+    padding: 0px 20px;
+    border-radius: 20px;
+    background: #c57642;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 1.2rem;
+  }
+
+  .titleForm {
+    color: #fff;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 180%;
+    text-transform: capitalize;
+    margin-top: 3rem;
+  }
+  .spanForm {
+    display: flex;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    padding: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
