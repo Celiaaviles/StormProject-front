@@ -1,5 +1,6 @@
 import { useCallback, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { url } from '../../config.ts';
 import { Storm } from '../model/storm.model';
 import {
   createStormThunk,
@@ -11,7 +12,7 @@ import {
 import { ApiStormsRepository } from '../services/api.storm.repository';
 import { AppDispatch, RootState } from '../store/store';
 
-export const urlBase = 'http://localhost:4300/storms';
+export const urlBase = url + '/storms';
 
 export function useStorm() {
   const repo = useMemo(() => new ApiStormsRepository(urlBase), []);

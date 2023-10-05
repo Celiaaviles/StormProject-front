@@ -1,12 +1,13 @@
 import { useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { url } from '../../config.ts';
 import { Login, UserNoId } from '../model/user.model';
 import { usersActions } from '../redux/user.slice';
 import { loginThunk, registerThunk } from '../redux/user.thunks';
 import { ApiUsersRepository } from '../services/api.user.repository';
 import { AppDispatch, RootState } from '../store/store';
 
-export const urlBase = 'http://localhost:4300/users';
+export const urlBase = url + '/users';
 
 export function useUser() {
   const repo = useMemo(() => new ApiUsersRepository(urlBase), []);
