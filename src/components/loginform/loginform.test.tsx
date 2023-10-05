@@ -7,6 +7,10 @@ import { UserNoId } from '../../model/user.model';
 import { appStore } from '../../store/store';
 import LoginForm from './loginform';
 
+jest.mock('../../../config.ts', () => ({
+  url: '',
+}));
+
 describe('if we use loginForm', () => {
   beforeEach(() =>
     render(

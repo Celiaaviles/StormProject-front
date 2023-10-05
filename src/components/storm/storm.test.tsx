@@ -6,6 +6,10 @@ import { Storm as storm } from '../../model/storm.model';
 import { appStore } from '../../store/store';
 import { StormCard } from './storm';
 
+jest.mock('../../../config.ts', () => ({
+  url: '',
+}));
+
 describe('Given the component Storm Card', () => {
   describe('When it is rendered', () => {
     const mockStorm = {

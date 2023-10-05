@@ -11,6 +11,10 @@ jest.mock('react-redux', () => ({
   useDispatch: jest.fn().mockReturnValue(jest.fn()),
 }));
 
+jest.mock('../../config.ts', () => ({
+  url: '',
+}));
+
 describe('Given the hook useStorm', () => {
   const mockStormForm = {} as unknown as FormData;
   const mockStorm = {} as unknown as Storm;

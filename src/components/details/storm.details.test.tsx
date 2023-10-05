@@ -8,6 +8,9 @@ import { appStore } from '../../store/store';
 import StormDetails from './storm.details';
 
 jest.mock('../../hooks/use.storm.ts');
+jest.mock('../../../config.ts', () => ({
+  url: '',
+}));
 
 describe('Given the component storm details', () => {
   describe('When it is rendered', () => {

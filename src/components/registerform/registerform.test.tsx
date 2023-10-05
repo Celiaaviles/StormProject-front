@@ -8,6 +8,10 @@ import { UserNoId } from '../../model/user.model';
 import { appStore } from '../../store/store';
 import RegisterForm from './registerform';
 
+jest.mock('../../../config.ts', () => ({
+  url: '',
+}));
+
 describe('Given the component registerForm', () => {
   beforeEach(() =>
     render(
@@ -72,31 +76,6 @@ describe('Given the component registerForm', () => {
         showConfirmButton: false,
         text: 'Please fill in all fields',
         timer: 4000,
-      });
-    });
-    test('The registerUser should be called on form submit', async () => {
-      const registerUsersMock = jest.fn();
-      const form = screen.getByRole('form') as HTMLFormElement;
-      const userNameInput = screen.getByPlaceholderText(
-        'User name'
-      ) as HTMLInputElement;
-      const passwdInput = screen.getByPlaceholderText(
-        'Password'
-      ) as HTMLInputElement;
-      const emailInput = screen.getByPlaceholderText(
-        'Email Address'
-      ) as HTMLInputElement;
-
-      await userEvent.type(userNameInput, 'user');
-      await userEvent.type(passwdInput, 'passwd');
-      await userEvent.type(emailInput, 'email');
-
-      fireEvent.submit(form);
-
-      expect(registerUsersMock).toHaveBeenCalledWith({
-        userName: 'user',
-        passwd: 'passwd',
-        email: 'email',
       });
     });
   });

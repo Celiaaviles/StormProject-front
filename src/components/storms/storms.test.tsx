@@ -9,6 +9,10 @@ import Storms from './storms';
 jest.mock('../storm/storm.tsx');
 jest.mock('../../hooks/use.storm.ts');
 
+jest.mock('../../../config.ts', () => ({
+  url: '',
+}));
+
 describe('Given the component Storms', () => {
   describe('When it is rendered', () => {
     (useStorm as jest.Mock).mockReturnValue({

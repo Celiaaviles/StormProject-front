@@ -8,6 +8,10 @@ import { appStore } from '../../store/store';
 import { Logged } from '../../types/logged';
 import Profile from './profile';
 
+jest.mock('../../../config.ts', () => ({
+  url: '',
+}));
+
 jest.mock('../../hooks/use.storm.ts');
 jest.mock('../../hooks/use.user.ts');
 
