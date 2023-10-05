@@ -5,6 +5,10 @@ import { MemoryRouter } from 'react-router-dom';
 import { appStore } from '../../store/store';
 import { Header } from './header';
 
+jest.mock('../../../config.ts', () => ({
+  url: '',
+}));
+
 describe('Given the componente Header', () => {
   describe('When we render it', () => {
     render(
