@@ -47,9 +47,9 @@ export function Header() {
                   </Link>
                 </li>
                 <li className={style.login} onClick={logoutUsers}>
-                  <Link className={style.login} to="/">
+                  <a className={style.login} href="/">
                     Logout
-                  </Link>
+                  </a>
                   <FaUser />
                 </li>
               </>
