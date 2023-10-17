@@ -1,15 +1,21 @@
-import { useEffect } from 'react';
+import { SyntheticEvent, useEffect } from 'react';
 import { useStorm } from '../../hooks/use.storm';
 import { Storm } from '../../model/storm.model';
 import { StormCard } from '../storm/storm';
 import styles from './storms.module.scss';
 
 export default function Storms() {
-  const { getStorms, storms } = useStorm();
+  const { getStorms, storms, ubication } = useStorm();
 
   useEffect(() => {
     getStorms();
   }, [getStorms]);
+
+  const handleUbication = (ev: SyntheticEvent) => {
+    const selectedUbication = (ev.target as HTMLSelectElement).value;
+    console.log(selectedUbication);
+    ubication(selectedUbication);
+  };
 
   return (
     <div className={styles.stormsMainList}>
@@ -19,6 +25,7 @@ export default function Storms() {
       </span>
       <nav className={styles.selectcontinent}>
         <select
+          onChange={handleUbication}
           className={styles.selectregion}
           defaultValue="See All"
           name="region"
