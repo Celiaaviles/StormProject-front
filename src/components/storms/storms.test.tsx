@@ -20,6 +20,7 @@ describe('Given the component Storms', () => {
         storms: [],
       },
       getStorms: jest.fn(),
+      ubication: jest.fn(),
     });
 
     beforeEach(() => {
