@@ -19,7 +19,8 @@ describe('Given the hook useStorm', () => {
   const mockStormForm = {} as unknown as FormData;
   const mockStorm = {} as unknown as Storm;
   function MockComponent() {
-    const { getStorms, createStorms, updateStorms, deleteStorms } = useStorm();
+    const { getStorms, createStorms, updateStorms, deleteStorms, ubication } =
+      useStorm();
 
     return (
       <>
@@ -34,6 +35,9 @@ describe('Given the hook useStorm', () => {
         </button>
         <button role="button" onClick={() => deleteStorms('', '')}>
           4
+        </button>
+        <button role="button" onClick={() => ubication('')}>
+          5
         </button>
       </>
     );
@@ -73,6 +77,13 @@ describe('Given the hook useStorm', () => {
       const buttons = screen.getAllByRole('button');
 
       await userEvent.click(buttons[3]);
+
+      expect(useDispatch()).toHaveBeenCalled();
+    });
+    test('Then, if we click button 5, ubication should have been called', async () => {
+      const buttons = screen.getAllByRole('button');
+
+      await userEvent.click(buttons[4]);
 
       expect(useDispatch()).toHaveBeenCalled();
     });
