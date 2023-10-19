@@ -1,4 +1,4 @@
-import { SyntheticEvent, useEffect } from 'react';
+import { SyntheticEvent, useEffect, useState } from 'react';
 import { useStorm } from '../../hooks/use.storm';
 import { Storm } from '../../model/storm.model';
 import { StormCard } from '../storm/storm';
@@ -17,6 +17,28 @@ export default function Storms() {
     ubication(selectedUbication);
   };
 
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const pageSize = 3;
+  const pageCount = Math.ceil(storms.length / pageSize);
+  let paginatedData = storms.slice(
+    (currentPage - 1) * pageSize,
+    currentPage * pageSize
+  );
+
+  const handleNextPage = () => {
+    if (currentPage < pageCount) {
+      setCurrentPage(currentPage + 1);
+      paginatedData = [];
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+      paginatedData = [];
+    }
+  };
   return (
     <div className={styles.stormsMainList}>
       <h2 className={styles.title}>Storms</h2>
@@ -43,10 +65,30 @@ export default function Storms() {
         </select>
       </nav>
       <ul className={styles.storms}>
-        {storms?.map((item: Storm) => (
+        {paginatedData?.map((item: Storm) => (
           <StormCard key={item.id} storm={item}></StormCard>
         ))}
       </ul>
+      {storms.length > 3 && (
+        <>
+          <div className={styles.previousNextButtonsdiv}>
+            <button
+              className={styles.previousNextButtons}
+              disabled={currentPage === 1 ? true : false}
+              onClick={handlePreviousPage}
+            >
+              {'<'}
+            </button>
+            <button
+              className={styles.previousNextButtons}
+              disabled={currentPage === pageCount ? true : false}
+              onClick={handleNextPage}
+            >
+              {'>'}
+            </button>
+          </div>
+        </>
+      )}
     </div>
   );
 }
