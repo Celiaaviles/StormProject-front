@@ -37,7 +37,8 @@ describe('Given the component storm details', () => {
     });
 
     (useStorm as jest.Mock).mockReturnValue({
-      stormsState: { storms: mockStorm },
+      storms: mockStorm as Storm[],
+      getStorms: jest.fn(),
     });
 
     beforeEach(() => {

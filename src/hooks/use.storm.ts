@@ -2,6 +2,7 @@ import { useCallback, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { url } from '../../config.ts';
 import { Storm } from '../model/storm.model';
+import { stormsActions } from '../redux/storm.slice';
 import {
   createStormThunk,
   deleteStormThunk,
@@ -41,6 +42,10 @@ export function useStorm() {
   const deleteStorms = async (id: string, token: string) => {
     await stormsDispatch(deleteStormThunk({ repo, id, token }));
   };
+  const ubication = async (ubication: string) => {
+    await stormsDispatch(loadAllStormThunk(repo));
+    stormsDispatch(stormsActions.ubication(ubication));
+  };
 
   return {
     getStorms,
@@ -50,5 +55,6 @@ export function useStorm() {
     deleteStorms,
     stormsState,
     storms,
+    ubication,
   };
 }

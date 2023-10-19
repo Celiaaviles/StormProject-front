@@ -25,6 +25,9 @@ export default function CreateStormForm() {
         description:
           (formElement.elements.namedItem('description') as HTMLInputElement)
             .value || storm.description,
+        ubication:
+          (formElement.elements.namedItem('region') as HTMLSelectElement)
+            .value || storm.ubication,
       };
       updateStorms(updatedStorm);
       navigate('/profile');
@@ -51,7 +54,7 @@ export default function CreateStormForm() {
         <div>
           <select
             className={styles.formSelect}
-            defaultValue="Select Region"
+            defaultValue={'Select Region'}
             name="region"
             id="region-select"
           >

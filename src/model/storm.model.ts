@@ -5,7 +5,7 @@ import { User } from './user.model';
 export type StormNoId = {
   title: string;
   image: ImgData;
-  ubication: 'America' | 'Asia' | 'Africa' | 'Europe' | 'Oceania';
+  ubication: string;
   description: string;
   owner: User;
 };

@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { Storm } from '../model/storm.model';
 import {
   createStormThunk,
@@ -19,7 +19,14 @@ const initialState: StormsState = {
 const stormsSlice = createSlice({
   initialState: initialState,
   name: 'storms',
-  reducers: {},
+  reducers: {
+    ubication: (state, action: PayloadAction<string>) => {
+      const ubication = action.payload;
+      state.storms = state.storms.filter(
+        (storm) => storm.ubication === ubication
+      );
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(loadAllStormThunk.pending, (state) => {
       state.stormsState = 'idle';
