@@ -21,6 +21,5 @@ export default {
     'vite-env.d.ts',
     'createstorm.tsx',
     'app.routes.tsx',
-    'storm.details.tsx',
   ],
 };
