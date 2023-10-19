@@ -48,4 +48,22 @@
     margin: 1rem;
     text-align: center;
   }
+  .previousNextButtonsdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .previousNextButtons {
+    all: unset;
+    font-size: 2.3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: #c57642;
+    font-weight: bold;
+  }
+
+  button:disabled {
+    opacity: 0.2;
+    cursor: none;
+  }
 }
