@@ -30,7 +30,6 @@ export function AppRoutes({ options }: Props) {
         <Route path={paths[6]} element={<ProfilePage></ProfilePage>}></Route>
         <Route path="/storms/:id" element={<StormPage></StormPage>} />
         <Route path="/createstorm/:id" element={<Form />} />
-
         <Route path="*" element={<ErrorPage></ErrorPage>}></Route>
       </Routes>
     </Suspense>
