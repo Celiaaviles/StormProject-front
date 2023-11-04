@@ -8,6 +8,7 @@ export default function CreateStormForm() {
   const navigate = useNavigate();
   const { createStorms, storms, updateStorms } = useStorm();
   const { id } = useParams();
+
   const handleSubmit = (ev: SyntheticEvent) => {
     ev.preventDefault();
     const formElement = ev.currentTarget as HTMLFormElement;
@@ -26,9 +27,10 @@ export default function CreateStormForm() {
           (formElement.elements.namedItem('description') as HTMLInputElement)
             .value || storm.description,
         ubication:
-          (formElement.elements.namedItem('region') as HTMLSelectElement)
+          (formElement.elements.namedItem('ubication') as HTMLSelectElement)
             .value || storm.ubication,
       };
+      console.log(updatedStorm);
       updateStorms(updatedStorm);
       navigate('/profile');
     }
@@ -55,8 +57,8 @@ export default function CreateStormForm() {
           <select
             className={styles.formSelect}
             defaultValue={'Select Region'}
-            name="region"
-            id="region-select"
+            name="ubication"
+            id="ubication"
           >
             <option value="Select Region" disabled>
               Select Region
@@ -76,12 +78,12 @@ export default function CreateStormForm() {
               name="title"
               placeholder="Title"
             />
-            <label htmlFor="file">Update storm image</label>
+            <label htmlFor="file">Upload storm image</label>
             <input
               className={styles.formButton}
               type="file"
               id="file"
-              placeholder="Update storm image"
+              placeholder="Upload storm image"
               name="image"
               accept="image/png, image/jpeg, image/jpg, image/webp"
             />

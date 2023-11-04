@@ -22,7 +22,7 @@ export const createStormThunk = createAsyncThunk<
   Storm,
   { repo: ApiStormsRepository; formData: FormData }
 >('storms/create', async ({ repo, formData }) => {
-  const storm = repo.create(formData);
+  const storm = await repo.create(formData);
   return storm;
 });
 
